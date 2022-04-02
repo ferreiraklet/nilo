@@ -9,6 +9,7 @@ import (
 	"os"
 	"strings"
 	"sync"
+	"net/url"
 	"flag"
 	"time"
 )
@@ -76,7 +77,7 @@ func main() {
 
 }
 
-func getParams(url string, headers string) string{
+func getParams(urlt string, headers string) string{
 	
 	var trans = &http.Transport{
 		DisableKeepAlives: true,
@@ -86,13 +87,17 @@ func getParams(url string, headers string) string{
 			Timeout: 5 * time.Second,
 		}).DialContext,
 	}
-
+		
 	client := &http.Client{
 		Transport: trans,
 		Timeout: 5 * time.Second,
 	}
-
-	res, err := http.NewRequest("GET", url, nil)
+	
+	_, err := url.ParseRequestURI(urlt)
+        if err != nil{
+                return "ERROR"
+        }
+	res, err := http.NewRequest("GET", urlt, nil)
 	
 	if headers != "0"{
 		if strings.Contains(headers, ";"){
@@ -120,7 +125,7 @@ func getParams(url string, headers string) string{
 	}
 	
 	if resp.StatusCode >= 200 && resp.StatusCode <= 299{
-		return url
+		return urlt
 	}else{
 		return "ERROR"
 	}
