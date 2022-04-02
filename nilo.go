@@ -60,12 +60,12 @@ func main() {
 			defer wg.Done()
 			if headers != ""{
 				x := getParams(url, headers)
-				 if x != "ERROR" {
+				if x != "ERROR" {
                          	 	fmt.Println(x)
                         }
 			}else{
 				x := getParams(url,"0")
-				 if x != "ERROR" {
+				if x != "ERROR" {
                                  	fmt.Println(x)
                         }
 		}
