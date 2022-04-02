@@ -27,7 +27,7 @@ OR
 
 
 ## - Usage & Explanation:
-* Read a list of URL's and return only HTTP 200 response code.
+* Inspired by hakcheckurl from hakluke, nilo reads a list of URL's and return only HTTP 200 response code.
 * You can use to check if endpoints are alive, Ex: `echo http://xxxxx.com/app.js | nilo`
 * You can specify headers: `echo http://xxxx.com/app.js | nilo -H "Header1: value1;Header2: Value2;Header3: Value3"` Be careful with syntax.
 
