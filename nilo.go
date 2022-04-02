@@ -45,8 +45,8 @@ func main() {
 	std := bufio.NewScanner(os.Stdin)
 	for std.Scan() {
 		var line string = std.Text()
-		hline := strings.Replace(line, "%2F", "/", -1)
-		line = hline
+		//hline := strings.Replace(line, "%2F", "/", -1)
+		//line = hline
 		
 		urls = append(urls, line)
 
