@@ -8,19 +8,15 @@
 <h3 align="center">Nilo makes requests to urls returning only if status code is 200</h3>
 
 ## - Installation & Requirements:
-```
+```bash
 > go install github.com/ferreiraklet/nilo@latest
-
+```
 OR
-
+```bash
 > git clone https://github.com/ferreiraklet/nilo.git
-
 > cd nilo
-
 > go build nilo.go
-
 > chmod +x nilo
-
 > ./nilo -h
 ```
 <br>
