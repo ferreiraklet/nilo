@@ -99,6 +99,9 @@ func getParams(urlt string, headers string) string{
     client := &http.Client{
         Transport: trans,
         Timeout: 5 * time.Second,
+        CheckRedirect: func(req *http.Request, via []*http.Request) error {
+            return http.ErrUseLastResponse
+                    },
     }
     
     _, err := url.ParseRequestURI(urlt)
