@@ -10,7 +10,7 @@
 
 ## - Installation & Requirements:
 ```bash
-> go install github.com/ferreiraklet/nilo@latest
+> go get -u github.com/ferreiraklet/nilo
 ```
 OR
 ```bash
