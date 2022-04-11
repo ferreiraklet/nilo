@@ -59,10 +59,15 @@ func main() {
             for target := range targets{
                 if headers != ""{
                     x := getParams(target, headers)
-                    if x != "ERROR" {fmt.Println(x)}
+                    if x != "ERROR" {
+                        fmt.Println(x)
+                    }
+                    
                 }else{
                     x := getParams(target,"0")
-                    if x != "ERROR" {fmt.Println(x)}
+                    if x != "ERROR" {
+                        fmt.Println(x)
+                    }
             }
         }
 
