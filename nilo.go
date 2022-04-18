@@ -104,7 +104,7 @@ func getParams(urlt string, headers string) string{
                     },
     }
     
-    _, err := url.ParseRequestURI(urlt)
+    _, err := url.Parse(urlt)
     if err != nil{
             return "ERROR"
         }
